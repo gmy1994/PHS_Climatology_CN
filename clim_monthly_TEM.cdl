@@ -1,0 +1,49 @@
+netcdf TEMPLATE {
+dimensions:
+        lon = 700 ;
+        lat = 400 ;
+        soil_layers = 4 ;
+        time = UNLIMITED ; // (1 currently)
+variables:
+        float clim_ET(time, lat, lon) ;
+                clim_ET:long_name = "clim_ET" ;
+                clim_ET:units = "mm d-1" ;
+                clim_ET:_FillValue = -999.f ;
+                clim_ET:missing_value = -999.f ;
+        float clim_TR(time, lat, lon) ;
+                clim_TR:long_name = "clim_TR" ;
+                clim_TR:units = "mm d-1" ;
+                clim_TR:_FillValue = -999.f ;
+                clim_TR:missing_value = -999.f ;
+        float clim_TR_ET(time, lat, lon) ;
+                clim_TR_ET:long_name = "clim_TR_ET" ;
+                clim_TR_ET:units = "-" ;
+                clim_TR_ET:_FillValue = -999.f ;
+                clim_TR_ET:missing_value = -999.f ;
+        float clim_VBTRAN(time, lat, lon) ;
+                clim_VBTRAN:long_name = "clim_VBTRAN" ;
+                clim_VBTRAN:units = "1" ;
+                clim_VBTRAN:_FillValue = -999.f ;
+                clim_VBTRAN:missing_value = -999.f ;
+        float clim_SFC_RO(time, lat, lon) ;
+                clim_SFC_RO:long_name = "clim_SFC_RO" ;
+                clim_SFC_RO:units = "mm d-1" ;
+                clim_SFC_RO:_FillValue = -999.f ;
+                clim_SFC_RO:missing_value = -999.f ;
+        float clim_UGD_RO(time, lat, lon) ;
+                clim_UGD_RO:long_name = "clim_UGD_RO" ;
+                clim_UGD_RO:units = "mm d-1" ;
+                clim_UGD_RO:_FillValue = -999.f ;
+                clim_UGD_RO:missing_value = -999.f ;
+        float clim_RO(time, lat, lon) ;
+                clim_RO:long_name = "clim_RO" ;
+                clim_RO:units = "mm d-1" ;
+                clim_RO:_FillValue = -999.f ;
+                clim_RO:missing_value = -999.f ;
+        float clim_SM(time, lat, soil_layers, lon) ;
+                clim_SM:long_name = "clim_SM" ;
+                clim_SM:units = "m3 m-3" ;
+                clim_SM:_FillValue = -999.f ;
+                clim_SM:missing_value = -999.f ;
+data:
+}
