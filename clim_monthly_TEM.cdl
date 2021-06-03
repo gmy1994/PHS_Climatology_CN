@@ -5,6 +5,16 @@ dimensions:
         soil_layers = 4 ;
         time = UNLIMITED ; // (1 currently)
 variables:
+        double lon(lon) ;
+                lon:long_name = "longitude" ;
+                lon:units = "degrees_east" ;
+                lon:standard_name = "longitude" ;
+                lon:axis = "X" ;
+        double lat(lat) ;
+                lat:long_name = "latitude" ;
+                lat:units = "degrees_north" ;
+                lat:standard_name = "latitude" ;
+                lat:axis = "Y" ;
         float clim_ET(time, lat, lon) ;
                 clim_ET:long_name = "clim_ET" ;
                 clim_ET:units = "mm d-1" ;

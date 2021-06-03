@@ -14,6 +14,9 @@ TEMPLATE  = "/work2/06956/mguo/script/climatology/clim_monthly_TEM.cdl"
 MASKFILE = '/work2/06956/mguo/script/mask/MASK_FOREST.nc'
 mask = nc.Dataset(MASKFILE).variables['MASK_FOREST'][:]
 
+lat = nc.Dataset("/scratch/06956/mguo/NoahMP_PHS/CN/output/process/clim_39/map_2m/clim.nc").variables['lat'][:]
+lon = nc.Dataset("/scratch/06956/mguo/NoahMP_PHS/CN/output/process/clim_39/map_2m/clim.nc").variables['lon'][:]
+
 os.system("mkdir " + OUTDIR)
 
 phsnm = ["map","oak"]
@@ -95,6 +98,8 @@ for i in range(len(phsnm)):
             os.system("rm " + output)
             subprocess.run(['ncgen', '-3', '-o', output, TEMPLATE])
             with nc.Dataset(output, 'a') as ncf:
+                ncf.variables['lat'][:] = lat[:]
+                ncf.variables['lon'][:] = lon[:]
                 ncf.variables['clim_TR'][:] = clim_TR[:]
                 ncf.variables['clim_ET'][:] = clim_ET[:]
                 ncf.variables['clim_TR_ET'][:] = clim_TR_ET[:]
