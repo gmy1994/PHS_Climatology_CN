@@ -19,7 +19,7 @@ os.system("mkdir " + OUTDIR)
 oak = INDIR + "oak_10m/" + "clim.nc"
 map = INDIR + "map_2m/" + "clim.nc"
 
-vars = ["clim_ET","clim_TR","clim_TR_ET","clim_VBTRAN","clim_SFC_RO","clim_UGD_RO","clim_RO","clim_SM"]
+vars = ["clim_ET","clim_TR","clim_ED","clim_TR_ET","clim_VBTRAN","clim_SFC_RO","clim_UGD_RO","clim_RO","clim_SM","clim_Q","clim_GPP"]
 
 output = OUTDIR + "oak_vs_map.nc"
 os.system("rm " + output)

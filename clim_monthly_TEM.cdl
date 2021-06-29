@@ -25,6 +25,11 @@ variables:
                 clim_TR:units = "mm d-1" ;
                 clim_TR:_FillValue = -999.f ;
                 clim_TR:missing_value = -999.f ;
+        float clim_ED(time, lat, lon) ;
+                clim_ED:long_name = "clim_ED" ;
+                clim_ED:units = "mm d-1" ;
+                clim_ED:_FillValue = -999.f ;
+                clim_ED:missing_value = -999.f ;
         float clim_TR_ET(time, lat, lon) ;
                 clim_TR_ET:long_name = "clim_TR_ET" ;
                 clim_TR_ET:units = "-" ;
@@ -32,7 +37,7 @@ variables:
                 clim_TR_ET:missing_value = -999.f ;
         float clim_VBTRAN(time, lat, lon) ;
                 clim_VBTRAN:long_name = "clim_VBTRAN" ;
-                clim_VBTRAN:units = "1" ;
+                clim_VBTRAN:units = "-" ;
                 clim_VBTRAN:_FillValue = -999.f ;
                 clim_VBTRAN:missing_value = -999.f ;
         float clim_SFC_RO(time, lat, lon) ;
@@ -55,5 +60,15 @@ variables:
                 clim_SM:units = "m3 m-3" ;
                 clim_SM:_FillValue = -999.f ;
                 clim_SM:missing_value = -999.f ;
+        float clim_Q(time, lat, soil_layers, lon) ;
+                clim_Q:long_name = "clim_Q" ;
+                clim_Q:units = "mm d-1" ;
+                clim_Q:_FillValue = -999.f ;
+                clim_Q:missing_value = -999.f ;
+        float clim_GPP(time, lat, lon) ;
+                clim_GPP:long_name = "clim_GPP" ;
+                clim_GPP:units = "umol m-2 s-1" ;
+                clim_GPP:_FillValue = -999.f ;
+                clim_GPP:missing_value = -999.f ;
 data:
 }
